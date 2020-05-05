@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginAndSignUp.UserDetailsActivity">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/topLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="28dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nandi2"
+                        android:src="@drawable/nandi_login_screen_logo_animated"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nandi"
+                        android:src="@drawable/nandi_login_screen_logo_"/>
+                </RelativeLayout>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/login_screen_desc"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="18sp"-->
+                <!--android:lineSpacingExtra="6dp"-->
+                <!--android:layout_marginBottom="10dp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Nandi!"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    android:layout_marginBottom="18dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLay"
+                android:id="@+id/phoneverify"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="24dp">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/verified"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phone_verified"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneverify"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="24dp"
+                android:id="@+id/linearL"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/firstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_bg_round"
+                        android:hint="First Name*"
+                        android:padding="12dp"
+                        android:textColor="@color/purple_11"
+                        android:nextFocusDown="@id/lastName"
+                        android:textSize="16sp"
+                        android:singleLine="true"/>
+
+                    <EditText
+                        android:id="@+id/lastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/purple_11"
+                        android:background="@drawable/input_bg_round"
+                        android:hint="Last Name*"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/input_bg_round"
+                    android:hint="Email*"
+                    android:singleLine="true"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/purple_11"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/birthday_cake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="2dp"
+                        android:padding="2dp"
+                        android:layout_marginLeft="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="8dp"
+                        android:src="@drawable/birthday" />
+
+                    <TextView
+                        android:id="@+id/openCal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/birthday_text"
+                        android:padding="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/locationCheckBox"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:buttonTint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="Share my location and get the best offers"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:paddingBottom="6dp"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/white"
+                    android:text="@string/enterBtn"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:background="@drawable/buttons_colorpurple_bg"
+                    android:padding="16dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

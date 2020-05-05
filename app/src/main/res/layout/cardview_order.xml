@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="32dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/userOrderLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="29dp"
+                android:background="@drawable/user_order_layout_bg"
+                android:padding="4dp"
+                android:paddingRight="0dp">
+
+
+
+                <TextView
+                    android:id="@+id/noImageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Kindly acknowledge the receipt of my order"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    />
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    android:layout_below="@id/noImageText"
+                    app:riv_corner_radius="8dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="35dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:id="@+id/timeStampLinearLay"
+                    android:background="@drawable/timer_bar"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20sp"
+                        android:id="@+id/doubletick"
+                        android:src="@drawable/played_icon"
+                        android:visibility="gone"
+                        android:paddingLeft="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20sp"
+                        android:id="@+id/scheduled"
+                        android:paddingLeft="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/sent_icon"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timerstamp_order"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:paddingLeft="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/rubik_regular"
+
+
+                        />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/playAudio"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/order_play_button_bg"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="4dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/topLay"
+            android:layout_alignEnd="@+id/topLay"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/order_box_corner" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_below="@id/topLay"
+        android:layout_marginTop="12dp"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/reciptcorner"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/receipt_box_corner"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/recieptsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/recOrderLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/distributor_reciept_bg"
+                android:layout_marginBottom="29dp"
+                android:padding="4dp"
+                android:paddingLeft="0dp">
+
+                <TextView
+                    android:id="@+id/schTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/recText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:layout_below="@id/schTime"
+                    android:textSize="16sp"
+                    />
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageRec"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:maxHeight="200dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    android:layout_below="@id/recText"
+                    app:riv_corner_radius="8dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timerstamp_reciept"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:background="@drawable/timer_bar"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/rubik_regular"
+
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/recAudio"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/reciept_play_button_bg"
+                android:paddingBottom="8dp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/rubik_regular"
+        />
+
+
+    <TextView
+        android:id="@+id/audioRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/rubik_regular"
+        />
+
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00::00"
+        android:visibility="gone"
+        android:fontFamily="@font/rubik_regular"
+        />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

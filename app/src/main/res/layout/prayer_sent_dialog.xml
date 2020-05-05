@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/prayer_sent_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        android:background="@drawable/imageviewround"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/lotus"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/prayer_sent_lotus"
+            android:layout_marginRight="8dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/prayerSentMessageReceiptScreen"
+            android:paddingRight="4dp"
+            android:id="@+id/prayer_sent"
+            android:textColor="@color/purple_11"
+            android:textSize="20dp"
+            android:fontFamily="@font/rubik_medium"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

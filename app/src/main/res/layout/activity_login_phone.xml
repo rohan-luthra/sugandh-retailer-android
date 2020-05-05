@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginAndSignUp.LoginPhoneActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="28dp"
+        android:orientation="vertical"
+        android:id="@+id/topLay">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nandi2"
+                android:src="@drawable/nandi_login_screen_logo_animated"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nandi"
+                android:src="@drawable/nandi_login_screen_logo_"/>
+        </RelativeLayout>
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_screen_desc"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="18sp"-->
+            <!--android:lineSpacingExtra="6dp"/>-->
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg_round"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_defaultNameCode="IN"
+            app:ccp_countryPreference="IN,US,CA,AE,GB"
+            android:layout_height="wrap_content"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccp_textSize="12dp"
+
+            />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/your_phone_number"
+            android:inputType="number"
+            android:textColor="@color/purple_11"
+            android:textColorHint="#d5d5d5"
+            android:background="@color/white"
+            android:padding="4dp"
+            android:textSize="18dp"
+            android:autoSizeMinTextSize="2dp"
+            android:autoSizeMaxTextSize="14dp"
+            android:autoSizeStepGranularity="2dp"
+            android:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="14dp"
+            app:autoSizeMinTextSize="2dp"
+            app:autoSizeStepGranularity="2dp"
+            app:autoSizeTextType="uniform"
+            android:singleLine="true"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="@string/continueBtn"
+            android:background="@drawable/buttons_colorpurple_bg"
+             />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".PlayDistOrderActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_toolbarsearch2"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_height="50dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:paddingLeft="0dp"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+    </android.support.v7.widget.Toolbar>
+    <com.sbw.auder.Utils.AudioStreaming
+        android:id="@+id/playCustomFonts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        android:textColor="@android:color/white"
+        android:textSize="40dp"
+        app:loadingText="Loading"
+        app:playText="Playing"
+        app:stopText="Stoppped"
+        app:useIcons="true"
+        android:visibility="gone"/>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="false"
+        app:surface_type="surface_view"
+        android:layout_below="@id/tb_toolbarsearch2"
+        />
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_11"
+        android:visibility="visible"
+        android:layout_below="@id/tb_toolbarsearch2"/>
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/lotus"
+        android:layout_centerInParent="true"
+        android:id="@+id/lotus"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:textColor="@color/white"
+        android:layout_below="@+id/lotus"
+        android:id="@+id/lotus_loading"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="26dp"
+        android:textSize="20sp"
+        android:visibility="gone"
+
+        />
+
+    <ImageView
+        android:id="@+id/orderImage"
+        android:layout_width="125dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        />
+
+    <ImageView
+        android:id="@+id/playAudio"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/exo_controls_pause"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminateTint="@color/white"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/timer_bar"
+        android:paddingHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/currentStatus"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/sent_icon"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_marginLeft="0.25dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="12345"
+            android:gravity="center_vertical"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            />
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_toolbarsearch2"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

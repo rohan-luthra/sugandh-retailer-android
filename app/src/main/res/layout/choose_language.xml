@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chooselangbg"
+    android:padding="16dp">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:id="@+id/chooseLang">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textSize="20dp"
+            android:textColor="@color/purple_11"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="हिंदी"
+            android:textSize="20dp"
+            android:textColor="@color/purple_11"
+            android:layout_marginTop="24dp"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseLang"
+        android:layout_centerHorizontal="true"
+        android:text="@string/select"
+        android:background="@drawable/chooselangbuttonbg"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:id="@+id/saveLang"/>
+
+</RelativeLayout>

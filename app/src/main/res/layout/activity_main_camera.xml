@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#000"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_above="@+id/container"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/downButton">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/bottombar"
+            android:background="@drawable/bottom_bar"
+            android:layout_marginHorizontal="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/picture"
+            android:paddingBottom="0dp"
+            android:src="@drawable/camera_button_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:layout_marginBottom="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/uploadImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gallery_button_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"/>
+        <Button
+
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:background="#00ffffff"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/skipButton"
+            android:textSize="20dp"
+            android:layout_marginRight="12dp"
+
+
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
+

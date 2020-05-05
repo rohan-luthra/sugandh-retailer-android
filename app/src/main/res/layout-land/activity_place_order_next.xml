@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".PlaceOrder.PlaceOrderNextActivity">
+
+    <FrameLayout
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:id="@+id/switchCamera"
+        android:layout_height="70dp"
+        android:src="@drawable/switch_camera_bg"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_camera_switch_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="24dp"
+        android:visibility="gone"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_bar2"
+            android:layout_marginHorizontal="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:id="@+id/btnCapture"
+            android:paddingBottom="0dp"
+            android:src="@drawable/camera_button_bg"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="visible"
+            android:layout_marginBottom="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/uploadImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_alignParentRight="true"
+            android:src="@drawable/gallery_button_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="4dp"
+            android:rotation="270"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"/>
+        <ImageView
+
+            android:id="@+id/skip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="6dp"
+            android:paddingRight="3dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="SKIP"
+            android:layout_alignParentTop="true"
+            android:rotation="270"
+            android:src="@drawable/skip_button_bg"
+            android:textSize="20dp"
+
+
+
+
+
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/yellow_7"
+        android:id="@+id/flipView"
+        android:visibility="gone"/>
+
+
+
+
+</RelativeLayout>

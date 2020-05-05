@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalletActivity.AddAmountActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_toolbarsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb_toolbarsearch"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/balanceLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/currentBalance"
+                android:textColor="#efefef"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_regular"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Rs"
+                    android:layout_gravity="bottom"
+                    android:paddingBottom="5dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:fontFamily="@font/rubik_regular"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:textSize="28sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rubik_regular"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/balanceLay"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/add_money_to_wallet"
+                android:gravity="center"
+                android:textColor="@color/purple_8"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/rubik_regular"
+                />
+
+            <EditText
+                android:id="@+id/amountToBeAdded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/purple_9"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/purple_9"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:inputType="number"
+                android:layout_margin="20dp"
+                android:singleLine="true"
+                android:fontFamily="@font/rubik_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/amount1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="200"
+                android:background="@drawable/btn_bg_purple"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeTextType="uniform"/>
+            <TextView
+                android:id="@+id/amount2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="500"
+                android:background="@drawable/btn_bg_purple"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"/>
+            <TextView
+                android:id="@+id/amount3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="1000"
+                android:background="@drawable/btn_bg_purple"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"/>
+            <TextView
+                android:id="@+id/amount4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:text="3000"
+                android:background="@drawable/btn_bg_purple"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="52dp"
+            android:text="@string/payOnline"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:background="@drawable/buttons_colorprimary_bg"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

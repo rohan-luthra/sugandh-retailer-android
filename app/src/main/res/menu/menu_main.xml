@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.MainActivity">
+
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_button"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/myProfile"
+        android:title="@string/myProfile"
+        />
+    <item
+        android:id="@+id/wallet"
+        android:title="@string/myWallet"
+        />
+    <item
+        android:id="@+id/aboutUs"
+        android:title="@string/aboutNandi"
+        />
+    <item
+        android:id="@+id/signOut"
+        android:title="@string/signOut"
+        />
+    <item
+        android:id="@+id/chooseLang"
+        android:title="@string/chooseLanguage"/>
+
+</menu>
